@@ -12,10 +12,19 @@
 
 .btn{
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   padding: 10px 30px;
   color: white;
-  background: #28a745;
+  background: rgb(77, 76, 76);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn_treino{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background: rgb(77, 76, 76);
   border: none;
   border-radius: 5px;
 }
@@ -132,6 +141,7 @@
 
 .section-padding{
   padding: 5px 20px 5px 20px;
+  margin-bottom: 80px;
 }
 
 /*FLEX-GRID*/
@@ -149,7 +159,9 @@
 }
 
 .flex-grid .column img{
-      height: 50%;
+      height: 45%;
     }
+
+    
       
 
