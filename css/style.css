@@ -48,7 +48,11 @@ img{
   height: auto; 
   border: 3px solid #2c2c2c;
 }
-
+video{
+  width: 100%; 
+  height: auto; 
+  border: 3px solid #2c2c2c;
+}
 
 /*NAVBAR*/
 
