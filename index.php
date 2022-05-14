@@ -1,4 +1,8 @@
-
+<?php
+ if(filter_has_var(INPUT_POST, 'submit')){
+   echo'submited';
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -205,7 +209,7 @@
       <div class="column">
         <div class="column-2 bg-light">
           <h2>Request Call Back</h2>
-          <form action="contactform.php" class="callback-form" method="POST">
+          <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?> class="callback-form" >
            <div class="form-control">
              <label for="name"></label>
             <input type="text" name="name" id="name" placeholder="Enter name" required>
