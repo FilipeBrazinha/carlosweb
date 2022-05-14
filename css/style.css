@@ -28,9 +28,15 @@ h1, h2{
 }
 
 h3{
-  margin-bottom: 10px;
-
+  margin-bottom: 40px;
 }
+  img.zumub{
+  border: none;
+  height: 80px;
+  margin-top: 10px;
+  }
+
+
 
 h1.perf{
   display: flex;
@@ -167,7 +173,7 @@ video{
 }
 
 .icons i{
-  background-color: #5b706a;
+  background-color: #48475e;
   color: white;
   padding: 1rem;
   border-radius: 50%;
