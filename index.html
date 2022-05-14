@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -204,23 +205,25 @@
       <div class="column">
         <div class="column-2 bg-light">
           <h2>Request Call Back</h2>
-          <form action="contactform.php" class="callback-form" method="POST">
+          <form action="" class="callback-form" method="POST">
            <div class="form-control">
              <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Enter name">
+            <input type="text" name="name" id="name" placeholder="Enter name" required>
            </div>
            <div class="form-control">
             <label for="email"></label>
-           <input type="email" name="email" id="email" placeholder="Enter email">
+           <input type="email" name="email" id="email" placeholder="Enter email" required>
           </div>
           <div class="form-control">
             <label for="subject"></label>
-           <input type="subject" name="subject" id="subject" placeholder="Enter subject">
+           <input type="subject" name="subject" id="subject" placeholder="Enter subject" required>
           </div>
           <div class="form-control">
-            <label for="message"></label>
-           <input type="message" name="message" id="message" placeholder="Enter message">
-          </div>
+            <textarea 
+            class="text-input message-input" 
+            placeholder="Enter Message"
+            name="message" required
+            ></textarea>
           <input type="submit" value="Send" id="submit" class="btn">
           </form>
          </div>
