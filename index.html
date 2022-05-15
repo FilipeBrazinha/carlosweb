@@ -195,7 +195,7 @@
       <div class="column">
         <div class="column-2 bg-light">
           <h2>Request Call Back</h2>
-          <form onsubmit="sendEmail(); reset(); return false" method="POST" class="callback-form"  >
+          <form action="https://formsubmit.co/carlos.brancom@gmail.com" method="POST" class="callback-form"  >
            <div class="form-control">
              <label for="name"></label>
             <input type="text" name="name" id="name" placeholder="Enter name" required>
@@ -256,22 +256,6 @@
           }
       }
     
-      </script>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        function sendEmail(){
-          Email.send({
-    Host : "smtp.gmail.com",
-    Username : "filipebrazinha@gmail",
-    Password : "password",
-    To : 'filipebrazinha@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New contact form",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-        }
-      </script>
+      </script>      
 </body>
 </html>
