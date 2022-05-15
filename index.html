@@ -107,37 +107,31 @@
   <p>O meu dia a dia no ginásio</p>
 <div class="row">
   <div class="column">
-    <a href="img/cases/cases1.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-    dolor sit amet consectetur adipisicing elit. In, eaque!">
+    <a href="img/cases/cases1.jpg" data-lightbox="cases" data-title="">
     <img src="img/cases/cases1.jpg" alt=""/>
     <h3>Ombros</h3>
   </a>
-   <a href="img/cases/cases2.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-   dolor sit amet consectetur adipisicing elit. In, eaque!">
+   <a href="img/cases/cases2.jpg" data-lightbox="cases" data-title="">
     <img src="img/cases/cases2.jpg" alt=""/>
     <h3>Costas</h3>
   </a>
    </div>
   <div class="column">
-    <a href="img/cases/cases3.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-   dolor sit amet consectetur adipisicing elit. In, eaque!">
+    <a href="img/cases/cases3.jpg" data-lightbox="cases" data-title="">
     <img src="img/cases/cases3.jpg" alt=""/>
     <h3>Braços</h3>
   </a>
-  <a href="img/cases/cases4.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-  dolor sit amet consectetur adipisicing elit. In, eaque!">
+  <a href="img/cases/cases4.jpg" data-lightbox="cases" data-title="">
    <img src="img/cases/cases4.jpg" alt=""/>
    <h3>Pernas</h3>
  </a>
   </div>
   <div class="column">
-    <a href="img/cases/cases5.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-   dolor sit amet consectetur adipisicing elit. In, eaque!">
+    <a href="img/cases/cases5.jpg" data-lightbox="cases" data-title="">
     <img src="img/cases/cases5.jpg" alt=""/>
     <h3>Abdominais</h3>
   </a>
-  <a href="img/cases/cases6.jpg" data-lightbox="cases" data-title="Lorem ipsum 
-  dolor sit amet consectetur adipisicing elit. In, eaque!">
+  <a href="img/cases/cases6.jpg" data-lightbox="cases" data-title="">
    <img src="img/cases/cases6.jpg" alt=""/>
    <h3>Peito</h3>
  </a>
@@ -169,9 +163,9 @@
 <!--TEAM-->
 <section id="team" class="team section-padding">
   <header class="section-header">
-    <h4>---</h4>
+    
     <h2>As minhas sugestões</h2>
-    <p>---</p>
+    
   <div class="flex-items">
     <div>
       <a href="https://www.zumub.com/PT/whey-isolada/zero-whey-isolate-500g#11483"> <img src="img/team/person1.jpg" alt=""></a>
@@ -201,7 +195,7 @@
       <div class="column">
         <div class="column-2 bg-light">
           <h2>Request Call Back</h2>
-          <form method="POST" action="contactform.php" class="callback-form" >
+          <form onsubmit="sendEmail(); reset(); return false" method="POST" class="callback-form"  >
            <div class="form-control">
              <label for="name"></label>
             <input type="text" name="name" id="name" placeholder="Enter name" required>
@@ -261,20 +255,23 @@
               scrolled = false;
           }
       }
-      $('#navbar a, .btn').on('click', function (e) {
-      if (this.hash !== '') {
-        e.preventDefault();
-
-        const hash = this.hash;
-
-        $('html, body').animate(
-          {
-            scrollTop: $(hash).offset().top - 100,
-          },
-          800
-        );
-      }
-    });
+    
+      </script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+          Email.send({
+    Host : "smtp.gmail.com",
+    Username : "filipebrazinha@gmail",
+    Password : "password",
+    To : 'filipebrazinha@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New contact form",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        }
       </script>
 </body>
 </html>
