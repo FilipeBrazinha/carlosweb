@@ -189,29 +189,30 @@
     <div class="row">
       <div class="column">
         <div class="column-1">
-          <img src="img/home/contact.jpg" alt="people">
+          <img class="conta" src="img/home/contact.png" alt="people">
         </div>
       </div>
       <div class="column">
         <div class="column-2 bg-light">
-          <h2>Request Call Back</h2>
+          <h2>Contacte-me</h2>
+          <h4>Estou aqui para o ajudar</h4>
           <form action="https://formsubmit.co/branco.carlosm@gmail.com" method="POST" class="callback-form"  >
            <div class="form-control">
              <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Enter name" required>
+            <input type="text" name="name" id="name" placeholder="Nome" required>
            </div>
            <div class="form-control">
             <label for="email"></label>
-           <input type="email" name="email" id="email" placeholder="Enter email" required>
+           <input type="email" name="email" id="email" placeholder="Email" required>
           </div>
           <div class="form-control">
             <label for="subject"></label>
-           <input type="subject" name="subject" id="subject" placeholder="Enter subject" required>
+           <input type="subject" name="subject" id="subject" placeholder="Assunto" required>
           </div>
           <div class="form-control">
             <textarea 
             class="text-input message-input" 
-            placeholder="Enter Message"
+            placeholder="Mensagem"
             name="message" required
             ></textarea>
           <input type="submit" value="Send" class="btn">
@@ -255,6 +256,21 @@
               scrolled = false;
           }
       }
+      $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          800
+        );
+      }
+    });
+
     
       </script>      
 </body>

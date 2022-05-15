@@ -101,12 +101,15 @@ video{
   
 }
 
-
+input.btn{
+  justify-content: center;
+}
 
 img.carlos10{
-  margin-top: 20px;
-  
+  margin-top: 20px;  
 }
+
+
 
 /*HEADER*/
 
@@ -255,12 +258,15 @@ textarea.text-input.message-input {
   margin: 0 auto 30px;
 }
 
+a.btn.btn-outline{
+  align-self: center;
+ }
 
 .message-input {
   height: 100px;
   width: 330px; }
 .text-input {
-  padding: 0.5rem 1 rem; }
+  padding: 0.5rem 0.3rem; }
 
 
 /*FOOTER*/
@@ -316,6 +322,9 @@ textarea.text-input.message-input {
 
   .team img{
     width: 70%;
+  }
+  a.btn.btn-outline{
+   align-self: center;
   }
 }
 
