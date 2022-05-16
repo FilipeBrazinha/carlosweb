@@ -328,3 +328,15 @@ a.btn.btn-outline{
   }
 }
 
+@media(max-width: 370px) {
+  .navbar{
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+  .navbar a{
+    padding: 10px 5px;
+    margin: 0 3px;
+    font-size: 0.6rem;
+  }
+}
